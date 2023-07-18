@@ -1,4 +1,4 @@
-# TesteTodoMVCMarcelo
+# Teste Marcelo Automação Web e API
 Teste Funcional simples do TodoMVC
 
 1- Instalar o Nodejs:
