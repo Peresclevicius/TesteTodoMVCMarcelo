@@ -9,10 +9,10 @@ https://playwright.dev/docs/intro
 (Seguir os passos já na pasta do projeto no Terminal do VSCode)
 
 3- Execução:
-No terminal do VSCode na pasta AutomaçãoTodoMVC digitar e pressionar Enter ao seguinte comando:
+No terminal do VSCode na pasta Automação TodoMVC Web digitar e pressionar Enter ao seguinte comando:
 npx playwright test
 
-Obs.: ao executar o Playright já irá produzir um relatório, o relatório presente fora da pasta AutomaçãoTodoMVC é o mesmo gerado ao executar o teste eu apenas fiz uma cópia.
+Obs.: ao executar o Playright já irá produzir um relatório, o relatório presente fora da pasta Automação TodoMVC Web é o mesmo gerado ao executar o teste eu apenas fiz uma cópia.
 
 4- Instalar o Postman:
 https://www.postman.com/downloads/
