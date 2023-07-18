@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "43d2beb6-ab5d-484d-9043-e73a7b3f67a7",
+		"name": "Teste API Marvel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28586938",
+		"_collection_link": "https://www.postman.com/testmarvelperesclevicius/workspace/test-marvel/collection/28586938-43d2beb6-ab5d-484d-9043-e73a7b3f67a7?action=share&creator=28586938&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Caracters_Listar_Todos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code está OK: 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"response é valido, contém um body sem erros\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"     pm.response.to.not.be.error;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}{{CharactersAPI}}?apikey={{APIkey}}&hash={{Hash}}&ts={{Ts}}",
+					"host": [
+						"{{URL}}{{CharactersAPI}}"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{APIkey}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{Hash}}"
+						},
+						{
+							"key": "ts",
+							"value": "{{Ts}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search_Character_Validation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code está OK: 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"response é valido, contém um body sem erros\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"     pm.response.to.not.be.error;\r",
+							"});\r",
+							"var resposta = pm.response.json();\r",
+							"pm.globals.set(\"CharacterID\", resposta.data.results[0].id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}{{CharactersAPI}}?apikey={{APIkey}}&hash={{Hash}}&ts={{Ts}}&name={{CharacterName}}",
+					"host": [
+						"{{URL}}{{CharactersAPI}}"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{APIkey}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{Hash}}"
+						},
+						{
+							"key": "ts",
+							"value": "{{Ts}}"
+						},
+						{
+							"key": "name",
+							"value": "{{CharacterName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comics_Listar_Todos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code está OK: 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"response é valido, contém um body sem erros\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"     pm.response.to.not.be.error;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}{{ComicsAPI}}?apikey={{APIkey}}&hash={{Hash}}&ts={{Ts}}",
+					"host": [
+						"{{URL}}{{ComicsAPI}}"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{APIkey}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{Hash}}"
+						},
+						{
+							"key": "ts",
+							"value": "{{Ts}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comics_Character_Search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code está OK: 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"response é valido, contém um body sem erros\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"     pm.response.to.not.be.error;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}{{ComicsAPI}}?apikey={{APIkey}}&hash={{Hash}}&ts={{Ts}}&characters={{CharacterID}}",
+					"host": [
+						"{{URL}}{{ComicsAPI}}"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{APIkey}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{Hash}}"
+						},
+						{
+							"key": "ts",
+							"value": "{{Ts}}"
+						},
+						{
+							"key": "characters",
+							"value": "{{CharacterID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

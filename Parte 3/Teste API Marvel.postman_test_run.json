@@ -1,0 +1,194 @@
+{
+	"id": "06db6560-9aec-4c96-a731-d7296b6ef4f2",
+	"name": "Teste API Marvel",
+	"timestamp": "2023-07-18T06:16:29.139Z",
+	"collection_id": "28586938-43d2beb6-ab5d-484d-9043-e73a7b3f67a7",
+	"folder_id": 0,
+	"environment_id": "28586938-b000e488-1897-444e-bc5e-c7516618587c",
+	"totalPass": 12,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-07-18T06:16:25.937Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "511ff931-5d0f-4d3c-bc1a-72f9119aab37",
+			"name": "Caracters_Listar_Todos",
+			"url": "http://gateway.marvel.com/v1/public/characters?apikey=023b0eaf2bc0a0c57c26a32afa1fdef0&hash=957807d0e54997d2cd768d69d84b34a7&ts=1",
+			"time": 957,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code está OK: 200": true,
+				"Content-Type is present": true,
+				"response é valido, contém um body sem erros": true
+			},
+			"testPassFailCounts": {
+				"Status code está OK: 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response é valido, contém um body sem erros": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				957
+			],
+			"allTests": [
+				{
+					"Status code está OK: 200": true,
+					"Content-Type is present": true,
+					"response é valido, contém um body sem erros": true
+				}
+			]
+		},
+		{
+			"id": "bc3bc0ad-0581-42e9-9d5d-5f335c2ccb24",
+			"name": "Search_Character_Validation",
+			"url": "http://gateway.marvel.com/v1/public/characters?apikey=023b0eaf2bc0a0c57c26a32afa1fdef0&hash=957807d0e54997d2cd768d69d84b34a7&ts=1&name=Steve Rogers",
+			"time": 214,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code está OK: 200": true,
+				"Content-Type is present": true,
+				"response é valido, contém um body sem erros": true
+			},
+			"testPassFailCounts": {
+				"Status code está OK: 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response é valido, contém um body sem erros": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				214
+			],
+			"allTests": [
+				{
+					"Status code está OK: 200": true,
+					"Content-Type is present": true,
+					"response é valido, contém um body sem erros": true
+				}
+			]
+		},
+		{
+			"id": "1d061d48-6ba4-437a-aaa6-2210f703f58f",
+			"name": "Comics_Listar_Todos",
+			"url": "http://gateway.marvel.com/v1/public/comics?apikey=023b0eaf2bc0a0c57c26a32afa1fdef0&hash=957807d0e54997d2cd768d69d84b34a7&ts=1",
+			"time": 1061,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code está OK: 200": true,
+				"Content-Type is present": true,
+				"response é valido, contém um body sem erros": true
+			},
+			"testPassFailCounts": {
+				"Status code está OK: 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response é valido, contém um body sem erros": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1061
+			],
+			"allTests": [
+				{
+					"Status code está OK: 200": true,
+					"Content-Type is present": true,
+					"response é valido, contém um body sem erros": true
+				}
+			]
+		},
+		{
+			"id": "5e422155-717f-4b28-8a3e-8fa0e36706ab",
+			"name": "Comics_Character_Search",
+			"url": "http://gateway.marvel.com/v1/public/comics?apikey=023b0eaf2bc0a0c57c26a32afa1fdef0&hash=957807d0e54997d2cd768d69d84b34a7&ts=1&characters=1010326",
+			"time": 344,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code está OK: 200": true,
+				"Content-Type is present": true,
+				"response é valido, contém um body sem erros": true
+			},
+			"testPassFailCounts": {
+				"Status code está OK: 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response é valido, contém um body sem erros": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				344
+			],
+			"allTests": [
+				{
+					"Status code está OK: 200": true,
+					"Content-Type is present": true,
+					"response é valido, contém um body sem erros": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2576,
+	"collection": {
+		"requests": [
+			{
+				"id": "511ff931-5d0f-4d3c-bc1a-72f9119aab37",
+				"method": "GET"
+			},
+			{
+				"id": "bc3bc0ad-0581-42e9-9d5d-5f335c2ccb24",
+				"method": "GET"
+			},
+			{
+				"id": "1d061d48-6ba4-437a-aaa6-2210f703f58f",
+				"method": "GET"
+			},
+			{
+				"id": "5e422155-717f-4b28-8a3e-8fa0e36706ab",
+				"method": "GET"
+			}
+		]
+	}
+}
